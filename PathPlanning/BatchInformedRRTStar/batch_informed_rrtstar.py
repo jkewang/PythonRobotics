@@ -562,7 +562,7 @@ class BITStar(object):
         y = [b * math.sin(it) for it in t]
         R = np.array([[math.cos(angle), math.sin(angle)],
                       [-math.sin(angle), math.cos(angle)]])
-        fx = R @ np.array([x, y])
+        fx = np.dot(R, np.array([x, y]))
         px = np.array(fx[0, :] + cx).flatten()
         py = np.array(fx[1, :] + cy).flatten()
         plt.plot(cx, cy, "xc")

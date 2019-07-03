@@ -1,4 +1,3 @@
-
 ## 动态窗口法（Dynamic Window Approach,DWA)
 　　　　　<img>![dwa](./Pictures/DWA.png)  
 　　动态窗口法是轨迹规划里较为简单的方法，也是使用最为广泛的方法，因为被Ros作为了Movebase的默认方法，因此在实际机器人的应用中极为广泛，也是值得研究的一种方法。
@@ -52,20 +51,11 @@
 ### 实验测试
 　　由上述分析可以看出，向后估计多少步是本算法关键的一个参数，因为DWA并不是像动态规划或强化学习一样，传统DWA对未来的估计没有任何智能，只是将当前的动作原封不动的应用于之后的每一个状态，因此可以想见，如果向后外推步数过少，则不能看到未来的危险，动作会过于激进;但如果向后外推步数过多，则会看到并不会遇到的危险，导致畏手畏脚。因此本实验通过变动不同的外推步数来观察得到的轨迹。  
  - 外推3步：  
-![Alt Text](https://giphy.com/gifs/Za3RPdUGZwxqKeEb5r/3steps_pred.gif)  
+ ![image](https://github.com/jkewang/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/Pictures/3steps_pred.gif)
  - 外推10步：  
-![Alt Text](https://giphy.com/gifs/eMltctwlhShVLx129u/10steps_pred.gif)  
+ ![image](https://github.com/jkewang/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/Pictures/10steps_pred.gif)
  - 外推30步：  
-![Alt Text](https://giphy.com/gifs/giKGoJKqyIhox80EQI/30steps_pred.gif)  
-
-
-
-
-
-
-
-
-
+ ![image](https://github.com/jkewang/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/Pictures/30steps_pred.gif)
 
 
 

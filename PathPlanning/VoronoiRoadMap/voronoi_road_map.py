@@ -103,7 +103,7 @@ def is_collision(sx, sy, gx, gy, rr, okdtree):
     D = rr
     nstep = round(d / D)
 
-    for i in range(nstep):
+    for i in range(int(nstep)):
         idxs, dist = okdtree.search(np.array([x, y]).reshape(2, 1))
         if dist[0] <= rr:
             return True  # collision
@@ -132,7 +132,7 @@ def generate_roadmap(sample_x, sample_y, rr, obkdtree):
     nsample = len(sample_x)
     skdtree = KDTree(np.vstack((sample_x, sample_y)).T)
 
-    for (i, ix, iy) in zip(range(nsample), sample_x, sample_y):
+    for (i, ix, iy) in zip(range(int(nsample)), sample_x, sample_y):
 
         index, dists = skdtree.search(
             np.array([ix, iy]).reshape(2, 1), k=nsample)

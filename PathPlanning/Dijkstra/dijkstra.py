@@ -149,7 +149,7 @@ class Dijkstra:
         elif py >= self.maxy:
             return False
 
-        if self.obmap[node.x][node.y]:
+        if self.obmap[int(node.x)][int(node.y)]:
             return False
 
         return True
@@ -171,11 +171,11 @@ class Dijkstra:
         print("ywidth:", self.ywidth)
 
         # obstacle map generation
-        self.obmap = [[False for i in range(self.ywidth)]
-                      for i in range(self.xwidth)]
-        for ix in range(self.xwidth):
+        self.obmap = [[False for i in range(int(self.ywidth))]
+                      for i in range(int(self.xwidth))]
+        for ix in range(int(self.xwidth)):
             x = self.calc_position(ix, self.minx)
-            for iy in range(self.ywidth):
+            for iy in range(int(self.ywidth)):
                 y = self.calc_position(iy, self.miny)
                 for iox, ioy in zip(ox, oy):
                     d = math.sqrt((iox - x)**2 + (ioy - y)**2)
