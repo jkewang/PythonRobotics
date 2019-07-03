@@ -1,3 +1,4 @@
+
 ## 动态窗口法（Dynamic Window Approach,DWA)
 　　　　　<img>![dwa](./Pictures/DWA.png)  
 　　动态窗口法是轨迹规划里较为简单的方法，也是使用最为广泛的方法，因为被Ros作为了Movebase的默认方法，因此在实际机器人的应用中极为广泛，也是值得研究的一种方法。
@@ -56,6 +57,17 @@
  ![image](https://github.com/jkewang/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/Pictures/10steps_pred.gif)
  - 外推30步：  
  ![image](https://github.com/jkewang/PythonRobotics/blob/master/PathPlanning/DynamicWindowApproach/Pictures/30steps_pred.gif)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

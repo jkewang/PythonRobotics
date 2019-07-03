@@ -1,7 +1,7 @@
 ## A_Star路径规划方法
 ---
 ### 方法核心
-　　　　　　　　　<img>![dwa](./Pictures/a-star-trap.png)  
+   　　　　　<img>![dwa](./Pictures/a-star-trap.png)  
 　　Ａstar是目前机器人领域最常用的路径规划方法之一，比起之前的各种规划方法，其搜索过程中引入了启发式函数，保证了搜索的效率。  
 　　Ａ*方法  
  - 输入：  
@@ -61,7 +61,7 @@ close_set中点的重要属性有：
 
 ###　实验
 Ａstar搜索的全过程：  
-　　  <img>![dwa](./Pictures/a_star.gif)
+　　<img>![dwa](./Pictures/a_star.gif)
 
 
 
