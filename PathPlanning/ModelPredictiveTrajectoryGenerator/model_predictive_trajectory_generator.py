@@ -112,7 +112,7 @@ def optimize_trajectory(target, k0, p):
 
         J = calc_J(target, p, h, k0)
         try:
-            dp = - np.linalg.inv(J) @ dc
+            dp = - np.matmul(np.linalg.inv(J), dc)
         except np.linalg.linalg.LinAlgError:
             print("cannot calc path LinAlgError")
             xc, yc, yawc, p = None, None, None, None
