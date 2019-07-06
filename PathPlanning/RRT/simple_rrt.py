@@ -19,7 +19,7 @@ class RRT():
     """
 
     def __init__(self, start, goal, obstacleList,
-                 randArea, expandDis=1.0, goalSampleRate=5, maxIter=500):
+                 randArea, expandDis=2, goalSampleRate=50, maxIter=500):
         """
         Setting Parameter
 
@@ -52,7 +52,7 @@ class RRT():
                 rnd = [random.uniform(self.minrand, self.maxrand), random.uniform(
                     self.minrand, self.maxrand)]
             else:
-                rnd = [self.end.x, self.end.y]
+                rnd = self.getgoalsample()
 
             # Find nearest node
             nind = self.GetNearestListIndex(self.nodeList, rnd)
@@ -121,6 +121,12 @@ class RRT():
         minind = dlist.index(min(dlist))
         return minind
 
+    def getgoalsample(self):
+        del_x = random.random()
+        del_y = random.random()
+        return [self.end.x + del_x - 0.5, self.end.y + del_y - 0.5]
+        #return [self.end.x, self.end.y]
+
     def __CollisionCheck(self, node, obstacleList):
 
         for (ox, oy, size) in obstacleList:
@@ -149,7 +155,7 @@ def main(gx=5.0, gy=10.0):
 
     # ====Search Path with RRT====
     obstacleList = [
-        (5, 5, 1),
+        #(5, 5, 1),
         (3, 6, 2),
         (3, 8, 2),
         (3, 10, 2),

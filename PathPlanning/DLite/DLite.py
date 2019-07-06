@@ -96,12 +96,15 @@ class D_Lite_planner(object):
                 if self.check_obs(n_id):
                     pass
                 else:
+                    pass
 
 
 
     def UpdateVertex(self):
+        pass
 
     def MotionOneStep(self):
+        pass
 
     def calc_final_path(self):
         rx = []
