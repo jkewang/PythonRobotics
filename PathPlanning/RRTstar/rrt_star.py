@@ -262,7 +262,7 @@ def main():
     ]  # [x,y,size(radius)]
 
     # Set Initial parameters
-    rrt = RRT(start=[0, 0], goal=[10, 10],
+    rrt = RRT(start=[0, 0], goal=[6, 8],
               randArea=[-2, 15], obstacleList=obstacleList)
     path = rrt.Planning(animation=show_animation, search_until_maxiter=False)
 
